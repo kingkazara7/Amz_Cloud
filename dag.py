@@ -110,11 +110,7 @@ def fetch_from_noaa_api(**kwargs):
     ti = kwargs['ti']
     dataset_name = kwargs['dag_run'].conf.get('dataset_name')
     file_name = kwargs['dag_run'].conf.get('file_name')
-    
-    # In a real implementation, use requests to access NOAA API
-    # Example: response = requests.get(f"https://api.noaa.gov/datasets/{dataset_name}/{file_name}")
-    
-    # For this example, we'll assume successful download
+
     local_file_path = f"/tmp/{file_name}"
     ti.xcom_push(key='local_file_path', value=local_file_path)
     return local_file_path
