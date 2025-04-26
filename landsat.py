@@ -11,7 +11,7 @@ def get_all_collections():
     landsat_stac = Client.open('https://landsatlook.usgs.gov/stac-server')
     return [i.id for i in landsat_stac.get_collections()]
 
-def query_landsat_stac(intersects: dict = None, datetime: str = None, collections: List[str] = None, query: dict = None, max_items: int = None) -> List[dict]:
+def query_landsat_stac(intersects: Tuple[int, int, int, int] = None, datetime: str = None, collections: List[str] = None, query: dict = None, max_items: int = None) -> List[dict]:
     """
     Query the Landsat STAC server for data with the follwoing input parameters:
     
@@ -26,6 +26,7 @@ def query_landsat_stac(intersects: dict = None, datetime: str = None, collection
     stac = Client.open('https://landsatlook.usgs.gov/stac-server')
     
     if intersects or datetime or collections or query is not None :
+        intersects = mapping(box(*intersects))
         query = stac.search(collections=collections,
                             max_items=max_items,
                             intersects=intersects,
@@ -43,11 +44,10 @@ if __name__ == '__main__':
   
     #(min_longitude, min_latitude, max_longitude, max_latitude)
     geo_bbox = (-115.359, 35.6763, -113.6548, 36.4831)
-    geojson_obj = mapping(box(*geo_bbox))
     query_return = query_landsat_stac(
         collections=['landsat-c2l2-sr'],
         query={'eo:cloud_cover': {'gte': 10}},
-        intersects=geojson_obj,
+        intersects=geo_bbox,
         datetime= '2015-07-01/2015-08-01'
     )
     print(query_return)
