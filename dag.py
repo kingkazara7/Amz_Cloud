@@ -13,10 +13,10 @@ import requests
 import logging
 
 default_args = {
-    'owner': 'data_pipeline',
+    'owner': 'zc_250',
     'depends_on_past': False,
     'start_date': datetime(2025, 4, 21),
-    'email': ['admin@example.com'], # ur email address 
+    'email': ['kingkazara@gmail.com'], 
     'email_on_failure': True,
     'email_on_retry': False,
     'retries': 3,
@@ -30,13 +30,13 @@ dag = DAG(
     description='A DAG for dataset retrieval, validation, and upload',
     schedule_interval=timedelta(days=1),
     catchup=False,
-    tags=['data_pipeline', 'dataset_processing'],
+    tags=['zc_250', 'dataset_processing'],
 )
 
 # initialize S3 and RDS clients
 def initialize_clients():
-    s3_client = boto3.client('s3')
-    rds_client = boto3.client('rds')
+    s3_client = boto3.client('s3', region_name='us-east-2')
+    rds_client = boto3.client('rds', region_name='us-east-2')
     return {'s3': s3_client, 'rds': rds_client}
 
 # function to check user authentication
