@@ -25,10 +25,9 @@ def query_landsat_stac(intersects: Tuple[int, int, int, int] = None, datetime: s
     """
     stac = Client.open('https://landsatlook.usgs.gov/stac-server')
     
-    if intersects or datetime or collections or query is not None :
+    if intersects or datetime or collections is not None :
         intersects = mapping(box(*intersects))
         query = stac.search(collections=collections,
-                            max_items=max_items,
                             intersects=intersects,
                             datetime=datetime,
                             query=query)
@@ -44,12 +43,7 @@ if __name__ == '__main__':
   
     #(min_longitude, min_latitude, max_longitude, max_latitude)
     geo_bbox = (-115.359, 35.6763, -113.6548, 36.4831)
-    query_return = query_landsat_stac(
-        collections=['landsat-c2l2-sr'],
-        query={'eo:cloud_cover': {'gte': 10}},
-        intersects=geo_bbox,
-        datetime= '2015-07-01/2015-08-01'
-    )
+    query_return = query_landsat_stac(intersects=geo_bbox, datetime='2015-07-01/2015-08-01', collections=['landsat-c2l2-sr'], query={})
     print(query_return)
 
 
