@@ -1,0 +1,154 @@
+[2025-04-26T22:34:48.353+0000] {processor.py:186} INFO - Started process (PID=685) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:34:48.354+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:34:48.356+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:34:48.356+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:34:48.361+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:34:48.360+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:34:48.362+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:34:48.384+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.038 seconds
+[2025-04-26T22:35:18.578+0000] {processor.py:186} INFO - Started process (PID=749) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:35:18.579+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:35:18.581+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:35:18.581+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:35:18.586+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:35:18.585+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:35:18.586+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:35:18.605+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.034 seconds
+[2025-04-26T22:35:49.486+0000] {processor.py:186} INFO - Started process (PID=813) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:35:49.487+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:35:49.490+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:35:49.490+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:35:49.494+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:35:49.493+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:35:49.494+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:35:49.513+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.034 seconds
+[2025-04-26T22:36:19.579+0000] {processor.py:186} INFO - Started process (PID=877) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:36:19.580+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:36:19.583+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:36:19.582+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:36:19.587+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:36:19.586+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:36:19.587+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:36:19.607+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.035 seconds
+[2025-04-26T22:36:50.239+0000] {processor.py:186} INFO - Started process (PID=941) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:36:50.240+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:36:50.243+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:36:50.243+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:36:50.247+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:36:50.246+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:36:50.248+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:36:50.267+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.035 seconds
+[2025-04-26T22:37:20.506+0000] {processor.py:186} INFO - Started process (PID=1005) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:37:20.507+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:37:20.510+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:37:20.509+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:37:20.514+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:37:20.513+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:37:20.514+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:37:20.534+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.035 seconds
+[2025-04-26T22:37:50.710+0000] {processor.py:186} INFO - Started process (PID=1069) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:37:50.710+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:37:50.713+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:37:50.712+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:37:50.717+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:37:50.716+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:37:50.717+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:37:50.736+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.032 seconds
+[2025-04-26T22:38:20.822+0000] {processor.py:186} INFO - Started process (PID=1132) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:38:20.823+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:38:20.826+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:38:20.825+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:38:20.830+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:38:20.829+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:38:20.830+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:38:20.849+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.034 seconds
+[2025-04-26T22:38:50.923+0000] {processor.py:186} INFO - Started process (PID=1195) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:38:50.924+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:38:50.927+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:38:50.927+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:38:50.931+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:38:50.930+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:38:50.931+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:38:50.951+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.034 seconds
+[2025-04-26T22:39:21.670+0000] {processor.py:186} INFO - Started process (PID=1259) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:39:21.670+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:39:21.673+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:39:21.672+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:39:21.677+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:39:21.676+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:39:21.677+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:39:21.697+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.034 seconds
+[2025-04-26T22:39:52.682+0000] {processor.py:186} INFO - Started process (PID=1323) to work on /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:39:52.685+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/noaa_dataset_processing.py for tasks to queue
+[2025-04-26T22:39:52.688+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:39:52.688+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:39:52.698+0000] {logging_mixin.py:190} INFO - [2025-04-26T22:39:52.695+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/noaa_dataset_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/noaa_dataset_processing.py", line 10, in <module>
+    from fetch_helper import build_noaa_url, fetch_and_store_from_api
+ModuleNotFoundError: No module named 'fetch_helper'
+[2025-04-26T22:39:52.699+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/noaa_dataset_processing.py
+[2025-04-26T22:39:52.727+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/noaa_dataset_processing.py took 0.054 seconds
