@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>body { padding: 20px; } .endpoint { margin-bottom: 20px; } code { background-color: #f8f9fa; padding: 2px 4px; border-radius: 4px; }</style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">NOAA Data API Documentation</h1>
+        <a href="/" class="btn btn-secondary mb-4">Back to Home</a>
+        <div class="card mb-4">
+            <div class="card-header"><h5>Available Endpoints</h5></div>
+            <div class="card-body">
+                <div class="endpoint"><h6><code>GET /health</code></h6><p>Health check.</p><a href="/health" class="btn btn-sm btn-outline-primary">Try it</a></div>
+                <div class="endpoint"><h6><code>GET /list_dags</code></h6><p>List DAGs.</p><a href="/list_dags" class="btn btn-sm btn-outline-primary">Try it</a></div>
+                <div class="endpoint"><h6><code>GET /list_files</code></h6><p>List files.<br><strong>prefix</strong> query param.</p><a href="/list_files?prefix=noaa/" class="btn btn-sm btn-outline-primary">Try it</a></div>
+                <div class="endpoint"><h6><code>GET /trigger_dag</code></h6><p>Trigger DAG.<br>datasetid, startdate, enddate, stationid, region params.</p><a href="/trigger_dag?datasetid=GHCND&startdate=2024-01-15" class="btn btn-sm btn-outline-primary">Try it</a></div>
+                <div class="endpoint"><h6><code>GET /download_file</code></h6><p>Download S3 file.<br><strong>key</strong> query param.</p></div>
+                <div class="endpoint"><h6><code>GET /process_and_download</code></h6><p>Trigger+wait+DAG+download.<br>datasetid, startdate, enddate, stationid, region, wait, timeout params.</p><a href="/process_and_download?datasetid=GHCND&startdate=2024-01-15" class="btn btn-sm btn-outline-primary">Try it</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    

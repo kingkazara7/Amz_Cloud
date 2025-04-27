@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Files</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>body { padding: 20px; } .file-item { margin-bottom: 8px; }</style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Available Files</h1>
+        <a href="/" class="btn btn-secondary mb-4">Back to Home</a>
+        <div class="card">
+            <div class="card-header"><h5>Files with prefix: {{ prefix }}</h5></div>
+            <div class="card-body">
+                {% if files %}
+                    <ul class="list-group">
+                    {% for file in files %}
+                        <li class="list-group-item file-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>{{ file.key }}</span>
+                                <span class="badge bg-secondary">{{ file.size }} bytes</span>
+                                <a href="/download_file?key={{ file.key }}" class="btn btn-sm btn-primary">Download</a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No files found with the specified prefix.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    
