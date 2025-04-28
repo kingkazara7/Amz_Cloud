@@ -88,20 +88,33 @@ def download_file():
 def trigger_dag():
     try:
         dag_id = request.args.get('dag_id', 'noaa_dataset_processing_and_reporting')
-        params = {k: request.args[k] for k in ['datasetid','startdate','enddate','stationid','region','version','request_user'] if k in request.args}
-        params.setdefault('datasetid','GHCND')
-        params.setdefault('region','Midwest')
-        params.setdefault('version','v1')
-        params.setdefault('request_user','web_api_user')
-        if 'startdate' not in params:
-            return jsonify({"status": "error", "message": "Missing startdate"}), 400
-        params.setdefault('enddate', params['startdate'])
-        run_id = f"manual_{int(time.time())}"
-        payload = {'dag_run_id': run_id, 'conf': params}
-        endpoint = f"{AIRFLOW_URL}/api/v1/dags/{dag_id}/dagRuns"
-        resp = requests.post(endpoint, json=payload, auth=(AIRFLOW_USERNAME, AIRFLOW_PASSWORD), headers={'Content-Type':'application/json'})
-        resp.raise_for_status()
-        return jsonify({"status": "success", "dag_id": dag_id, "run_id": run_id})
+        if dag_id == 'noaa_dataset_processing_and_reporting':
+            params = {k: request.args[k] for k in ['datasetid','startdate','enddate','stationid','region','version','request_user' ] if k in request.args}
+            params.setdefault('datasetid','GHCND')
+            params.setdefault('region','Midwest')
+            params.setdefault('version','v1')
+            params.setdefault('request_user','web_api_user')
+            if 'startdate' not in params:
+                return jsonify({"status": "error", "message": "Missing startdate"}), 400
+            params.setdefault('enddate', params['startdate'])
+            run_id = f"manual_{int(time.time())}"
+            payload = {'dag_run_id': run_id, 'conf': params}
+            endpoint = f"{AIRFLOW_URL}/api/v1/dags/{dag_id}/dagRuns"
+            resp = requests.post(endpoint, json=payload, auth=(AIRFLOW_USERNAME, AIRFLOW_PASSWORD), headers={'Content-Type':'application/json'})
+            resp.raise_for_status()
+            return jsonify({"status": "success", "dag_id": dag_id, "run_id": run_id})
+        elif dag_id == 'landsat_stac_processing':
+            run_id = f'manual_{int(time.time())}'
+            payload = {'dag_run_id': run_id, 'conf': {
+                'datetime': request.args['datetime'],
+                'intersects': (float(request.args['intersect1']), float(request.args['intersect2']), float(request.args['intersect3']), float(request.args['intersect4'])),
+                'collections': [request.args['collection']]
+            }}
+            print(payload)
+            endpoint = f'{AIRFLOW_URL}/api/v1/dags/{dag_id}/dagRuns' 
+            resp = requests.post(endpoint, json=payload, auth=(AIRFLOW_USERNAME, AIRFLOW_PASSWORD), headers={'Content-Type':'application/json'})
+            resp.raise_for_status()
+            return jsonify({'status': 'success', 'dag_id': dag_id, 'run_id': run_id})
     except Exception as e:
         logger.exception("Error triggering DAG")
         return jsonify({"status": "error", "message": str(e)}), 500
@@ -203,4 +216,4 @@ def process_and_download():
         return jsonify({"status":"error","message":str(e)}),500
 
 if __name__=='__main__':
-    app.run(host='0.0.0.0',port=5000,debug=True)
+    app.run(host='0.0.0.0',port=5001,debug=True)
